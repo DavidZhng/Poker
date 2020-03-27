@@ -304,13 +304,14 @@ public class Frame extends JFrame implements ActionListener, MouseListener{
                 for(int k = 0;k<5;k++){
                     if(hand.get(k).getValue()==possibleStraightCombos[i][j]){
                         straightCount++;
+                        break;
                     }
                 }
             }
             if(straightCount==5){
                 hasStraight = true;
             }
-            straightCount = 0;
+            
         }
         for(int j = 0;j<hand.size();j++){
             if(hand.get(j).getSuitName().equals(suitOfFirstCard)){
